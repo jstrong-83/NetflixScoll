@@ -1,0 +1,300 @@
+<html>
+  <head>
+
+    <style>
+      .slider-container {
+        display:flex;
+        height:112px;
+        width: 100%;
+        margin-top: 50px;
+      }
+      .drag-scrollview{
+        cursor: grab;
+        display: flex;
+        overflow-x: auto;
+        max-height: 120px;
+        border: 1px solid #ddd;
+      }
+      .drag-scrollview::-webkit-scrollbar{
+        width: 0;
+        height:0;
+      }
+
+      .drag-scrollview .item{
+        height: 110px;
+        min-width: 185px;
+        line-height: 110px;
+        text-align: center;
+        margin-right: 5px;
+        border-radius: 8px;
+        background-color: #0392ac;
+      }
+
+      .item:hover {
+            /* background-color: rgba(rgba(23, 74, 133, 0.678), green, blue, alpha); */
+        filter: grayscale(100%);
+        transform: scale(1.3);
+        box-shadow: 7px 7px 10px #222222;
+        transition: 0.5s ease;
+        
+}
+      ::-webkit-scrollbar {
+        width: 0px;  /* remove scrollbar space */
+        background: transparent;  /* optional: just make scrollbar invisible */
+      }
+
+      #container1, .drag-scrollview,
+      #container2, .drag-scrollview,
+      #container3, .drag-scrollview browser{
+        margin-right:0px!important;
+        margin-bottom:0px!important;
+        overflow-y:hidden;
+        overflow-x:hidden;
+}
+
+      
+      .arrowbutton-l{
+        height: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50px;
+        overflow: visible;
+        transform: translateX(50px);
+        /* background: #4d4d4d; */
+        background: linear-gradient(90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0));
+        opacity: 0;
+        
+      }
+
+      .arrowbutton-l:hover{
+        transition: .7s;       
+        opacity: .75;
+        cursor: pointer;
+        -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+        -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+        box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+      }
+      .arrowL:hover, .arrowR:hover{
+        transition: .7s;
+        opacity: 1;
+      }
+          
+      .arrowL{
+        border-top: #ffffff 3px solid;
+        border-left: #ffffff 3px solid;
+        width: 25px;
+        height: 25px;
+        transform: translateY(150%) translateX(25%) rotate(-45deg);
+        margin: auto;
+        opacity: 0;
+      }
+
+      .arrowbutton-r{
+        right: 0px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 50px;
+        width: 50px;
+        height: 100%;
+        transform: translateX(-50px);
+        background: linear-gradient(-90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0));
+        opacity: 0;        
+      }
+      .arrowR{
+        border-top: #ffffff 3px solid;
+        border-left: #ffffff 3px solid;
+        width: 25px;
+        height: 25px;
+        transform: translateY(150%) translateX(-25%) rotate(135deg);
+        margin: auto;
+        opacity: 0;
+      }
+      .arrowbutton-r:hover {
+        transition: .7s;
+        opacity: .75;
+        cursor: pointer;
+        -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+        -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+        box-shadow: -1px 2px 3px rgba(0,0,0,.5);
+        
+      }
+      
+    </style>
+  </head>
+
+<body>
+  <div class="slider-container">
+      <div class="arrowbutton-l">
+        <div class="arrowL"></div>
+  </div>
+    <div id="container1" class="drag-scrollview">
+      <div class="item">box-1</div>
+      <div class="item">box-2</div>
+      <div class="item">box-3</div>
+      <div class="item">box-4</div>
+      <div class="item">box-5</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+    </div>
+    <div class="arrowbutton-r">
+      <div class="arrowR"></div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="arrowbutton-l">
+      <div class="arrowL"></div>
+    </div>
+    <div id="container2" class="drag-scrollview">
+      <div class="item">box-1</div>
+      <div class="item">box-2</div>
+      <div class="item">box-3</div>
+      <div class="item">box-4</div>
+      <div class="item">box-5</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+    </div>
+    <div class="arrowbutton-r">
+      <div class="arrowR"></div>
+    </div>
+  </div>
+
+  <div class="slider-container">
+    <div class="arrowbutton-l">
+      <div class="arrowL"></div>
+    </div>
+    <div id="container3" class="drag-scrollview">
+      <div class="item">box-1</div>
+      <div class="item">box-2</div>
+      <div class="item">box-3</div>
+      <div class="item">box-4</div>
+      <div class="item">box-5</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>
+      <div class="item">box-6</div>      
+    </div>
+    <div class="arrowbutton-r">
+      <div class="arrowR"></div>
+    </div>
+  
+    
+  
+</body>
+
+<script>
+
+  
+  // const sliderEles    = document.getElementsByClassName('slider-container');
+  // let sliderDataList  =[];
+  // for(var index = 0; index < sliderEles.length; ++index)
+  // {
+  //     let scollViews  = sliderEles[index].getElementsByClassName('drag-scrollview');
+  //     let leftArrows  = sliderEles[index].getElementsByClassName('arrowbutton-l');
+  //     let rightArrows = sliderEles[index].getElementsByClassName('arrowbutton-r');
+  //     let data        = {
+  //       parentObject: sliderEles[index],
+  //       scrollView: scrollViews.length  > 0 ? scrollViews[0] : undefined,
+  //       arrowLeft: leftArrows.length    > 0 ? leftArrows[0] :undefined,
+  //       arrowRight: rightArrows.length  > 0 ? rightArrows[0] :undefined,
+  //     }
+  //     sliderDataList.push(data);
+  // }
+
+  let pos           = { top: 0, left: 0, x: 0, y: 0 };
+  const eles        = document.getElementsByClassName('drag-scrollview');
+  let activeElement = undefined;
+
+  const returnActiveElement = function(x, y){
+    for(var index = 0; index < eles.length; ++index)
+    {
+      const rect = eles[index].getBoundingClientRect();
+      if(x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom)
+      {
+        return eles[index];
+      }
+    }
+    return undefined;
+  }
+
+  const mouseDownHandler = function(e) {
+    activeElement = returnActiveElement(e.clientX, e.clientY);
+    if(activeElement != undefined)
+    {
+      // Change the cursor and prevent user from selecting the text
+      activeElement.style.cursor     = 'grabbing';
+      activeElement.style.userSelect = 'none';
+      pos = {
+          // The current scroll 
+          left: activeElement.scrollLeft,
+          top: activeElement.scrollTop,
+          // Get the current mouse position
+          x: e.clientX,
+          y: e.clientY,
+      };
+      document.addEventListener('mousemove', mouseMoveHandler);
+      document.addEventListener('mouseup', mouseUpHandler);
+    }
+  };
+
+  const mouseMoveHandler = function(e) {
+    if(activeElement != undefined)
+    {
+      // How far the mouse has been moved
+      const dx = e.clientX - pos.x;
+      const dy = e.clientY - pos.y;
+
+      // Scroll the element
+      activeElement.scrollTop  = pos.top - dy;
+      activeElement.scrollLeft = pos.left - dx;
+    }
+  };
+
+  const mouseUpHandler = function() {
+    if(activeElement != undefined)
+    {
+      activeElement.style.cursor = 'grab';
+      activeElement.style.removeProperty('user-select');
+      document.removeEventListener('mousemove', mouseMoveHandler);
+      document.removeEventListener('mouseup', mouseUpHandler);
+    }
+  };
+  
+  document.addEventListener('mousedown', mouseDownHandler);
+</script>
+
+</html>
