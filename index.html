@@ -1,125 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-
-    <style>
-      .slider-container {
-        display:flex;
-        height:112px;
-        width: 100%;
-        margin-top: 50px;
-      }
-      .drag-scrollview{
-        cursor: grab;
-        display: flex;
-        overflow-x: auto;
-        max-height: 120px;
-        border: 1px solid #ddd;
-      }
-      .drag-scrollview::-webkit-scrollbar{
-        width: 0;
-        height:0;
-      }
-
-      .drag-scrollview .item{
-        height: 110px;
-        min-width: 185px;
-        line-height: 110px;
-        text-align: center;
-        margin-right: 5px;
-        border-radius: 8px;
-        background-color: #0392ac;
-      }
-
-      .item:hover {
-            /* background-color: rgba(rgba(23, 74, 133, 0.678), green, blue, alpha); */
-        filter: grayscale(100%);
-        transform: scale(1.3);
-        box-shadow: 7px 7px 10px #222222;
-        transition: 0.5s ease;
-        
-}
-      ::-webkit-scrollbar {
-        width: 0px;  /* remove scrollbar space */
-        background: transparent;  /* optional: just make scrollbar invisible */
-      }
-
-      #container1, .drag-scrollview,
-      #container2, .drag-scrollview,
-      #container3, .drag-scrollview browser{
-        margin-right:0px!important;
-        margin-bottom:0px!important;
-        overflow-y:hidden;
-        overflow-x:hidden;
-}
-
-      
-      .arrowbutton-l{
-        height: 100%;
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 50px;
-        overflow: visible;
-        transform: translateX(50px);
-        /* background: #4d4d4d; */
-        background: linear-gradient(90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0));
-        opacity: 0;
-        
-      }
-
-      .arrowbutton-l:hover{
-        transition: .7s;       
-        opacity: .75;
-        cursor: pointer;
-        -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-        -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-        box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-      }
-      .arrowL:hover, .arrowR:hover{
-        transition: .7s;
-        opacity: 1;
-      }
-          
-      .arrowL{
-        border-top: #ffffff 3px solid;
-        border-left: #ffffff 3px solid;
-        width: 25px;
-        height: 25px;
-        transform: translateY(150%) translateX(25%) rotate(-45deg);
-        margin: auto;
-        opacity: 0;
-      }
-
-      .arrowbutton-r{
-        right: 0px;
-        flex-grow: 0;
-        flex-shrink: 0;
-        flex-basis: 50px;
-        width: 50px;
-        height: 100%;
-        transform: translateX(-50px);
-        background: linear-gradient(-90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0));
-        opacity: 0;        
-      }
-      .arrowR{
-        border-top: #ffffff 3px solid;
-        border-left: #ffffff 3px solid;
-        width: 25px;
-        height: 25px;
-        transform: translateY(150%) translateX(-25%) rotate(135deg);
-        margin: auto;
-        opacity: 0;
-      }
-      .arrowbutton-r:hover {
-        transition: .7s;
-        opacity: .75;
-        cursor: pointer;
-        -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-        -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-        box-shadow: -1px 2px 3px rgba(0,0,0,.5);
-        
-      }
-      
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Scroll Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    
   </head>
 
 <body>
