@@ -4,15 +4,18 @@ body {
 
 .slider-container {
   display: flex;
-  height: 112px;
+  height: 175px;
   width: 100%;
   margin-top: 50px;
+  text-align: center;
+  /* overflow-y: hidden; */
 }
 .drag-scrollview {
   cursor: grab;
   display: flex;
   overflow-x: auto;
-  max-height: 120px;
+  height: 175px;
+  align-items: center;
   /* border: 1px solid #ddd; */
 }
 .drag-scrollview::-webkit-scrollbar {
@@ -55,15 +58,25 @@ body {
 }
 
 .arrowbutton-l {
-  height: 100%;
-  flex-grow: 0;
+  height: 110px;
+  /* flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50px;
-  overflow: visible;
+  overflow: visible; */
   transform: translateX(50px);
-  /* background: #4d4d4d; */
-  /* background: linear-gradient(90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0)); */
+  z-index: 2;
   opacity: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(34, 34, 34),
+    rgb(255, 255, 255, 0)
+  );
+  align-self: center;
+}
+.arrow {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .arrowbutton-l:hover {
@@ -74,42 +87,24 @@ body {
   -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
-/* .arrowL:hover,
-.arrowR:hover {
-  transition: 0.7s;
-  opacity: 1;
-} */
-
-/* .arrowL {
-  border-top: #ffffff 3px solid;
-  border-left: #ffffff 3px solid;
-  width: 25px;
-  height: 25px;
-  transform: translateY(150%) translateX(25%) rotate(-45deg);
-  margin: auto;
-  opacity: 0;
-} */
-
 .arrowbutton-r {
   right: 0px;
   flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50px;
   width: 50px;
-  height: 100%;
+  height: 110px;
   transform: translateX(-50px);
+  z-index: 2;
   /* background: linear-gradient(-90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0)); */
   opacity: 0;
+  background-image: linear-gradient(
+    to left,
+    rgb(34, 34, 34),
+    rgb(255, 255, 255, 0)
+  );
+  align-self: center;
 }
-/* .arrowR {
-  border-top: #ffffff 3px solid;
-  border-left: #ffffff 3px solid;
-  width: 25px;
-  height: 25px;
-  transform: translateY(150%) translateX(-25%) rotate(135deg);
-  margin: auto;
-  opacity: 0;
-} */
 .arrowbutton-r:hover {
   transition: 0.7s;
   opacity: 0.75;
