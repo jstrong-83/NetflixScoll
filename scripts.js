@@ -39,7 +39,7 @@ const handleArrowButtons = function(x, y) {
     if(x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom)
     {
       // Do some left movement stuff
-      activeElement.scrollView.scrollLeft += offsetAmount;
+      activeElement.scrollView.scrollLeft -= offsetAmount;
       return true;
     }
     else if(activeElement.arrowRight !== undefined)
@@ -48,7 +48,7 @@ const handleArrowButtons = function(x, y) {
       if(x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom)
       {
         // Do some right movement stuff
-      activeElement.scrollView.scrollLeft -= offsetAmount;
+      activeElement.scrollView.scrollLeft += offsetAmount;
         return true;
       }
     }

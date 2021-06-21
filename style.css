@@ -58,7 +58,6 @@ body {
 }
 
 .arrowbutton-l {
-  /* height: 110px; */
   /* flex-grow: 0;
   flex-shrink: 0;
   flex-basis: 50px;
@@ -104,7 +103,6 @@ body {
   /* flex-shrink: 0; */
   /* flex-basis: 50px; */
   width: 50px;
-  /* height: 110px; */
   transform: translateX(-50px);
   z-index: 2;
   /* background: linear-gradient(-90deg, rgb(71, 71, 71), rgba(112, 112, 112, 0)); */
