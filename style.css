@@ -6,7 +6,7 @@ body {
   display: flex;
   /* height: 175px; */
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
   text-align: center;
   /* overflow-y: hidden; */
 }
@@ -78,14 +78,18 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-
-#item-btn-hieght {
+.drag-scrollview :first-child {
+  margin-left: 35px;
+}
+.drag-scrollview :last-child {
+  margin-right: 45px;
+}
+.item-btn-hieght {
   height: 110px;
 }
-#drag-cont-hieght {
+.drag-cont-hieght {
   height: 185px;
 }
-
 .arrowbutton-l:hover {
   transition: 0.7s;
   opacity: 0.75;
